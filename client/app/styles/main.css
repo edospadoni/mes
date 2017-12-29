@@ -36,13 +36,33 @@ body {
 }
 
 .model-manager {
-  width: 70%;
+  width: 50%;
   float: left;
-  border-right: 1px solid #ccc;
+  margin-bottom: 30px;
 }
 
 .machine-state {
-  width: 30%;
+  width: 50%;
   float: right;
   padding-left: 10px;
+  border-left: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.adjust-input {
+  max-width: 70%;
+}
+
+.adjust-col {
+  width: 20%;
+}
+
+.green-OK {
+  background: #27ae60;
+  color: white;
+}
+
+.red-KO {
+  background: #e74c3c;
+  color: white;
 }

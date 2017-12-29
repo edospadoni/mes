@@ -56,7 +56,7 @@ angular.module('mesUiApp')
         code: configs.TAG_COD_PRINT,
         value: artCode
       }).then(function (result) {
-        console.log(result);
+        console.log(configs.TAG_COD_NUM, "OK");
       }, function (reason) {
         console.error(reason);
       });
@@ -66,7 +66,7 @@ angular.module('mesUiApp')
         code: configs.TAG_COD_NUM,
         value: artAmount
       }).then(function (result) {
-        console.log(result);
+        console.log(configs.TAG_COD_NUM, "OK");
       }, function (reason) {
         console.error(reason);
       });

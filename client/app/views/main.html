@@ -15,7 +15,7 @@
         <div class="meta">Container: {{m.pz_container}}</div>
         <div class="description">
           <p>{{m.description}}</p>
-          <div class="ui action input">
+          <div class="ui action input adjust-input">
             <input ng-model="m.amount" type="text" placeholder="Insert value...">
             <button ng-click="setParam(m.code, m.amount)" class="ui button">Send</button>
           </div>
@@ -33,15 +33,15 @@
     <thead>
       <tr>
         <th>Description</th>
-        <th>Status</th>
-        <th>Code</th>
+        <th class="adjust-col">Status</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="p in obj.params">
         <td>{{p.description}}</td>
-        <td>{{obj.currentParams[p.code]}}</td>
-        <td title="{{p.code}}">{{p.code}}</td>
+        <td class="{{ obj.currentParams[p.code] == 'true' ? 'green-OK' : (obj.currentParams[p.code] == 'false' ? 'red-KO' : obj.currentParams[p.code]) }}">
+          {{ obj.currentParams[p.code] == "true" ? "ON" : (obj.currentParams[p.code] == "false" ? "OFF" : obj.currentParams[p.code]) }}
+        </td>
       </tr>
     </tbody>
   </table>
