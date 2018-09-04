@@ -12,7 +12,9 @@ angular.module('mesUiApp')
       models: [],
       params: [],
       searchArticles: '',
-      currentParams: {}
+      currentParams: {},
+      machineState: 0,
+      isMobile: window.innerWidth < 768
     };
 
     $scope.getAllArticles = function () {
@@ -39,14 +41,17 @@ angular.module('mesUiApp')
         }
       }, function (reason) {
         console.error(reason);
+        $scope.obj.machineState = 0;
       });
     };
 
     $scope.getParam = function (code) {
       MachineService.getParam(code).then(function (paramVal) {
         $scope.obj.currentParams[code] = paramVal[0].trim();
+        $scope.obj.machineState = 1;
       }, function (reason) {
         console.error(reason);
+        $scope.obj.machineState = 0;
       });
     };
 

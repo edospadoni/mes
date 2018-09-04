@@ -1,4 +1,4 @@
-<div class="model-manager">
+<div ng-if="!obj.isMobile" class="model-manager">
   <h3>Model Manager</h3>
 
   <div class="ui action input">
@@ -26,9 +26,9 @@
 
 </div>
 
-<div class="machine-state">
-  <h3>Machine State</h3>
-
+<div class="{{obj.isMobile ? 'machine-state-mobile' : 'machine-state'}}">
+  <h3 class="inline">Machine State</h3>
+  <div class="state {{obj.machineState ? 'state-ok' : 'state-ko'}}">{{obj.machineState ? 'Connected' : 'Not Connected'}}</div>
   <table class="ui fixed single line celled table">
     <thead>
       <tr>

@@ -49,6 +49,12 @@ body {
   margin-bottom: 30px;
 }
 
+.machine-state-mobile {
+  width: 100%;
+  float: right;
+  margin-bottom: 30px;
+}
+
 .adjust-input {
   max-width: 70%;
 }
@@ -58,11 +64,32 @@ body {
 }
 
 .green-OK {
-  background: #27ae60;
+  background: #27ae60 !important;
   color: white;
 }
 
 .red-KO {
-  background: #e74c3c;
+  background: #e74c3c !important;
   color: white;
+}
+
+.inline {
+  display: inline;
+}
+
+.state {
+  background: gray;
+  color: white;
+  text-align: center;
+  width: 120px;
+  height: 22px;
+  float: right;
+  border-radius: 4px;
+}
+
+.state-ok {
+  background: #27ae60;
+}
+.state-ko {
+  background: #e74c3c;
 }
