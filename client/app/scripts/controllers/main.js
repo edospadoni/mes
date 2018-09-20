@@ -55,7 +55,7 @@ angular.module('mesUiApp')
       });
     };
 
-    $scope.setParam = function (artCode, artAmount) {
+    $scope.setParam = function (artCode, artAmount, artCont) {
       // set print code
       MachineService.setParam({
         code: configs.TAG_COD_PRINT,
@@ -72,6 +72,16 @@ angular.module('mesUiApp')
         value: artAmount
       }).then(function (result) {
         console.log(configs.TAG_COD_NUM, "OK");
+      }, function (reason) {
+        console.error(reason);
+      });
+
+      // set c2
+      MachineService.setParam({
+        code: configs.TAG_COD_CONT,
+        value: artCont
+      }).then(function (result) {
+        console.log(configs.TAG_COD_CONT, "OK");
       }, function (reason) {
         console.error(reason);
       });

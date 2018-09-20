@@ -6,5 +6,6 @@ var configs = {
   API_URL: 'http://NODE_SERVER_IP:NODE_SERVER_PORT',
   POLLING_INTERVAL: 5000, // ms
   TAG_COD_PRINT: '',
-  TAG_COD_NUM: ''
+  TAG_COD_NUM: '',
+  TAG_COD_CONT: ''
 };
